@@ -1,9 +1,9 @@
-from shutil import copy
-from sys import argv
+import shutil
+import sys
 src = r"src/Its_Hub.py"
-dst = argv[1] # Python libraries address
+dst = sys.argv[1] # Python libraries address
 dst = rf"{dst}"
 print("dst = " + dst)
 print("Start copying...")
-copy(src, dst)
+shutil.copy(src, dst)
 print("Copy ended. Now, you can use Its_Hub library :)")
