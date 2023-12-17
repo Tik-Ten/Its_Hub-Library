@@ -29,8 +29,6 @@ hub = Its_Hub()
     <li><a href="#Faker">Faker</a></li>
     <li><a href="#Fake_profile">Fake_profile</a></li>
     <li><a href="#Mini">Mini</a></li>
-    <li><a href="#"></a></li>
-    <li><a href="#"></a></li>
 </ul>
 
 # Faker
