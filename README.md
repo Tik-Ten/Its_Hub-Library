@@ -1,10 +1,10 @@
-# Version: 0.0.6 
+# Version: 0.0.7
 
 <h1>Intro </h1>
 <p>
 Its_Hub library. <br />
 This is a library with Other Libraries! (; <br />
-U Can Use This Library For Use Few Other Library. 4 Example:
+U Can Use This Library For Use Few Other Libraries. 4 Example:
 <b>
 <ul>
     <li>Faker</li>
@@ -27,6 +27,14 @@ For download this library:
 >>> cd Its_Hub
 >>> pip install -r requirements.txt
 >>> python setup.py <Your python libraries address>
+```
+example for python libraries address: <b>"C:/Users/Farbod Parkhooi/AppData/Local/Programs/Python/Python311/Lib" </b>
+
+# How to remove
+To remove this app:
+```git
+>>> cd Its_Hub
+>>> python remove.py <Your python libraries address>
 ```
 example for python libraries address: <b>"C:/Users/Farbod Parkhooi/AppData/Local/Programs/Python/Python311/Lib" </b>
 
@@ -59,7 +67,7 @@ name = Its_Hub.Faker(target="name")
 # Fake_profile 
 ### Show a digital fake profile
 ```python
-profile = hub.Fake_profile() # You can coustomise job, company, name, and ...
+profile = hub.Fake_profile() # You can customize job, company, name, and ...
 profile.Create_result(profile.Create_profile()) 
 ```
 output:
