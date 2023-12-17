@@ -25,7 +25,7 @@ git clone https://github.com/Tik-Ten/Its_Hub.git
 cd Its_Hub
 python setup.py <Your python libraries address>
 ```
-example for python libraries address: "C:/Users/Farbod Parkhooi/AppData/Local/Programs/Python/Python311/Lib"
+example for python libraries address: <b>"C:/Users/Farbod Parkhooi/AppData/Local/Programs/Python/Python311/Lib" </b>
 
 # How to use ... library
 <ul>
