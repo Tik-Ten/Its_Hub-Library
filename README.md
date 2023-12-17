@@ -25,6 +25,7 @@ For download this library:
     For use Its_Hub you can use This:
 
 ```python
+from Its_Hub import Its_Hub
 hub = Its_Hub()
 ````
 
