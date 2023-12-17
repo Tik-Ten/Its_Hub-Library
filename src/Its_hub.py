@@ -52,7 +52,7 @@ class Its_Hub():
     print("YOU USING ***Its_Hub*** LIBRARY FOR DO SOMETHING IN THIS CODE.")
     def Faker(target):
         try: from faker import Faker
-        except ImportError: Return_error("import error. \nYou most install Faker library with: \npip3 install Faker", 0, 19)
+        except ImportError: Return_error("import error. \nYou most install Faker library with: \npip3 install Faker", 0, 55)
         faker = Faker()
         try:
             if target == "first_name": return faker.first_name()
@@ -65,7 +65,7 @@ class Its_Hub():
             elif target == "company": return faker.company()
             elif target == "website": return faker.website()
             elif target == "blood_group": return faker.blood_group()
-        except AttributeError: Return_error("Attribute error. Your faker library has a problem.", 0, "22 -> 31")
+        except AttributeError: Return_error("Attribute error. Your faker library has a problem.", 0, "58 -> 67")
     class Fake_profile():
         def __init__(self, Gender="M", Company=None, blood_group=None, website=None, username=None, name=None, sex=None, address=None, Job=None, mail=None):
             self.gender = Gender
@@ -126,12 +126,12 @@ ____________________________________________
     class Mini():
         def Plus(number, plus):
             try: return number + int(plus)
-            except: Return_error("Value error. Plus isn't int!", 0, 93)
+            except: Return_error("Value error. Plus isn't int!", 0, 129)
         def Count(start_number, range_num):
             try: 
                 start_number = int(start_number)
                 range_num = int(range_num)
-            except ValueError: Return_error("Value error. Start_number or range_num isn't int!", 0, 98)
+            except ValueError: Return_error("Value error. Start_number or range_num isn't int!", 0, 134)
             for i in range(range_num):
                 start_number = start_number + 1
             return start_number
