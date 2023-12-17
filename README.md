@@ -11,7 +11,7 @@ U Can Use This Library For Use Few Other Libraries. 4 Example:
     <li>Tkinter</li>
     <li>CV2</li>
     <li>Tkhtmlview</li>
-    <li>sqlite3 </li>li>
+    <li>sqlite3 </li>
     <li>...</li>
 </ul>
 </b>
