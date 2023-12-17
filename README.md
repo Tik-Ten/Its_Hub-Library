@@ -1,4 +1,4 @@
-# Version: 0.0.8
+# Version: 0.0.9
 
 <h1>Intro </h1>
 <p>
@@ -38,6 +38,14 @@ To remove this app:
 >>> python remove.py <Your python libraries address>
 ```
 example for python libraries address: <b>"C:/Users/Farbod Parkhooi/AppData/Local/Programs/Python/Python311/Lib" </b>
+
+# Check
+```Python
+import Its_Hub
+Its_Hub.__version__()
+# Output:
+Its_Hub Library version is 0.0.9
+```
 
 # How to use ... library
 <ul>
