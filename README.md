@@ -21,6 +21,13 @@ Thanks for use.<br />
 # How to install
 For download this library:
 
+# How to use ... library
+<ul>
+    <li><a href="#Faker">Faker</a></li>
+    <li><a href="#Fake_profile">Fake_profile</a></li>
+    <li><a href="#Mini">Mini</a></li>
+</ul>
+
 <h2>Use Libraries </h2>
     For use Its_Hub you can use This:
 
@@ -28,13 +35,6 @@ For download this library:
 from Its_Hub import Its_Hub
 hub = Its_Hub()
 ````
-
-# How to use ... library
-<ul>
-    <li><a href="#Faker">Faker</a></li>
-    <li><a href="#Fake_profile">Fake_profile</a></li>
-    <li><a href="#Mini">Mini</a></li>
-</ul>
 
 # Faker
 For use Faker:
