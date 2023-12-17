@@ -135,3 +135,31 @@ ____________________________________________
             for i in range(range_num):
                 start_number = start_number + 1
             return start_number
+    class SQL():
+        def __init__(self, Table_name, Table_Attributes, Database_address="", Database_name="database"):
+            self.Table_name = Table_name
+            self.Table_Attributes = Table_Attributes
+            self.Address = Database_address
+            self.Name = Database_name
+        def Create_database(self):
+            try: import sqlite3 as SQL
+            except ImportError: Return_error("Import error. You most install sqlite3.", 0, 145)
+            connect = SQL.connect(self.Address + self.Name + ".db")
+            connect.close()
+        def Create_Table(self):
+            try: import sqlite3 as SQL
+            except ImportError: Return_error("Import error. You most install sqlite3.", 0, 151)
+            connect = SQL.connect(self.Address + self.Name + ".db")
+            cursor = connect.cursor()
+            cursor.execute(f"""CREATE TABLE IF NOT EXISTS {self.Table_name} ({self.Table_Attributes});""")
+            connect.commit()
+            connect.close()
+        def Save_in_database(self, Attributes):
+            try: import sqlite3 as SQL
+            except ImportError: Return_error("Import error. You most install sqlite3.", 0, 160)
+            connect = SQL.connect(self.Address + self.Name + ".db")
+            cursor = connect.cursor()
+            cursor.execute(f"""INSERT INTO {self.Table_name} ({self.Table_Attributes})
+                            VALUES ({Attributes})""")
+            connect.commit()
+            connect.close()
