@@ -1,4 +1,4 @@
-# Version: 0.0.7
+# Version: 0.0.8
 
 <h1>Intro </h1>
 <p>
@@ -11,6 +11,7 @@ U Can Use This Library For Use Few Other Libraries. 4 Example:
     <li>Tkinter</li>
     <li>CV2</li>
     <li>Tkhtmlview</li>
+    <li>sqlite3 </li>li>
     <li>...</li>
 </ul>
 </b>
@@ -43,6 +44,7 @@ example for python libraries address: <b>"C:/Users/Farbod Parkhooi/AppData/Local
     <li><a href="#Faker">Faker</a></li>
     <li><a href="#Fake_profile">Fake_profile</a></li>
     <li><a href="#Mini">Mini</a></li>
+    <li><a href="#SQL">SQL </a></li>
 </ul>
 
 <h2>Use Libraries </h2>
@@ -84,7 +86,7 @@ print(Profile_list)
 ### Plus
 You can use this function for num1 + num2 (:
 ```python
-ans = hub.Mini.Plus(number=8, plus=10)
+result = hub.Mini.Plus(number=8, plus=10)
 print(ans)
 ```
 ### Count
@@ -92,4 +94,23 @@ You can count and plus with this function.
 ```python
 count_ans = hub.Mini.Count(0, 5)
 print(count_ans)
+```
+
+# SQL
+### Create_database
+```python
+sql = hub.SQL("Users", "'Name', 'Email', 'Password'") # You most write Table_name and Table_Attributes and you can write the Database_address, and Database_name
+sql.Create_database()
+```
+
+### Create_Table
+```python
+sql = hub.SQL("Users", "'Name', 'Email', 'Password'") # You most write Table_name and Table_Attributes and you can write the Database_address, and Database_name
+sql.Create_Table()
+```
+
+### Save_in_database
+```python
+sql = hub.SQL("Users", "'Name', 'Email', 'Password'") # You most write Table_name and Table_Attributes and you can write the Database_address, and Database_name
+sql.Save_in_database("'Farbod Parkhooi', 'your@email.com', 'Example@2023'")
 ```
