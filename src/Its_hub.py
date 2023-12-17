@@ -48,6 +48,8 @@ From Its_Hub library.                                                           
 ____________________________________________________________________________________|
 """)
     quit(exit_code)
+def __version__():
+    print("Its_Hub Library version is: 0.0.9")
 class Its_Hub():
     print("YOU USING ***Its_Hub*** LIBRARY FOR DO SOMETHING IN THIS CODE.")
     def Faker(target):
