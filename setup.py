@@ -1,16 +1,9 @@
-from setuptools import setup, find_packages
-
-setup(
-    name="Its_Hub",
-    version="0.0.1",
-    packages=find_packages(),
-    install_requires=[
-        "Faker",
-        "tkhtmlview",
-        "opencv-python",
-    ],
-    author="Farbod Parkhooi(Tik Ten)",
-    description="Its_Hub is a library for use Other Libraries! (;",
-    long_description=open("README.md").read(),
-    long_description_content_type="text/markdown"
-)
+import shutil
+import sys 
+src = r"src/Its_Hub.py"
+dst = sys.argv[1] # Python libraries address
+dst = rf"{dst}"
+print("dst = " + dst)
+print("Start copying...")
+shutil.copy(src, dst)
+print("Copy ended. Now, you can use Its_Hub library :)")
