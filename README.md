@@ -1,4 +1,4 @@
-# Version: 0.1.2
+# Version: 0.1.3
 
 <h1>Intro </h1>
 <p>
@@ -156,6 +156,11 @@ cv = hub.Computer_Vision()
 cv.Start_video(VideoCapture=0, Show=True, exit_button="q", Detect_Faces=True)
 ```
 
+### Detect Pose
+```Python
+cv = hub.Computer_Vision() 
+cv.Start_video(VideoCapture=0, Show=True, exit_button="q", Detect_Pose=True)
+```
 
 # Links
 <ul>
