@@ -218,3 +218,10 @@ ____________________________________________
             engine.say(self.text)
             if save_voice != False: engine.save_to_file(self.text, File_name)
             engine.runAndWait()
+    class QR():
+        def Create_QR(Data, name="qrcode.png"):
+            try: import qrcode
+            except ImportError: Return_error("Import error. You must download qrcode library with: \npip install qrcode", 0, 224)
+            img = qrcode.make(data=Data)
+            img.save(name)
+            
