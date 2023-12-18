@@ -50,7 +50,7 @@ ________________________________________________________________________________
 """)
     quit(exit_code)
 def __version__():
-    print("Its_Hub Library version is 0.1.0")
+    print("Its_Hub Library version is 0.1.2")
 class Its_Hub():
     print("YOU USING ***Its_Hub*** LIBRARY FOR DO SOMETHING IN THIS CODE.")
     def Faker(target):
@@ -180,12 +180,18 @@ ____________________________________________
             if Detect_Hands != False or Detect_Faces != False: 
                 try: 
                     from cvzone.HandTrackingModule import HandDetector
-                    from cvzone.FaceMeshModule import FaceMeshDetector
+                    from cvzone.FaceDetectionModule import FaceDetector
                 except ImportError: Return_error("Import error.  You must install cvzone library with: \npip install cvzone", 0, 184)
             cap = cv.VideoCapture(VideoCapture)
+            cap = cv.VideoCapture(0)
+            try:
+                Hand_detector = HandDetector()
+                Face_detector = FaceDetector()
+            except: print("Detect Hand or Face is no able.")
             while True:
                 _, frame = cap.read()
-
+                if Detect_Hands != False:  _, frame = Hand_detector.findHands(frame)
+                if Detect_Faces != False: frame, _ = Face_detector.findFaces(frame)
                 if Show == True: cv.imshow("Its webcam video! from Its_Hub library.", frame)
                 else: pass
                 cv.waitKey(1)
