@@ -173,7 +173,7 @@ ____________________________________________
             cursor.execute(f"""SELECT {SELECT} FROM {self.Table_name} WHERE {WHERE};""")
             return str(cursor.fetchall()[0][0])
     class Computer_Vision():
-        def Start_video(VideoCapture=0, Show=True, exit_button="q"):
+        def Start_video(none, VideoCapture=0, Show=True, exit_button="q"):
             try: import cv2 as cv 
             except ImportError: Return_error("Import error.  You must")
             cap = cv.VideoCapture(VideoCapture)
@@ -182,7 +182,7 @@ ____________________________________________
 
                 if Show == True: cv.imshow("Its webcam video! from Its_Hub library.", frame)
                 else: pass
-                cv.waitKey()
+                cv.waitKey(1)
                 if cv.waitKey(1) & 0xFF == ord(exit_button): 
                     break
             cap.release() 
