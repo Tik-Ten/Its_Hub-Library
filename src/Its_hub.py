@@ -202,3 +202,19 @@ ____________________________________________
                     break
             cap.release() 
             cv.destroyAllWindows()
+    class Voice():
+        def __init__(self, text, speed=125, gender="M"):
+            self.text = text
+            self.speed = speed
+            self.gender = gender
+        def Say(self, save_voice=False, File_name=None):
+            try: import pyttsx3
+            except ImportError: Return_error("Import error. You must import pyttsx3 library with: \npip install pyttsx3", 0, 212)
+            engine = pyttsx3.init()
+            engine.setProperty('rate', int(self.speed))
+            voices = engine.getProperty('voices')
+            if self.gender == "M": engine.setProperty('voice', voices[0].id)
+            elif self.gender == "F": engine.setProperty('voice', voices[1].id)
+            engine.say(self.text)
+            if save_voice != False: engine.save_to_file(self.text, File_name)
+            engine.runAndWait()
