@@ -142,3 +142,13 @@ In this class, I use CV2 and CVZone to use a computer webcam.
 cv = hub.Computer_Vision()
 cv.Start_video(VideoCapture=0, Show=True, exit_button="q")
 ```
+
+
+
+
+
+# Links
+<ul>
+    <li><a href="https://simple.wikipedia.org/w/index.php?title=User%3AFarbod_Parkhooi%2FIts_Hub_Library">Wikipedia</a></li>
+    <li><a href="https://www.aparat.com/ImRick">Aparat</a></li>
+</ul>  
