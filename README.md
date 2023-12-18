@@ -139,6 +139,6 @@ In this class, I use CV2 and CVZone to use a computer webcam.
 
 ### Start_Video
 ```Python
-cv = h.Computer_Vision()
+cv = hub.Computer_Vision()
 cv.Start_video(VideoCapture=0, Show=True, exit_button="q")
 ```
