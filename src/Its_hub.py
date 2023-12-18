@@ -224,3 +224,8 @@ ____________________________________________
             except ImportError: Return_error("Import error. You must download qrcode library with: \npip install qrcode", 0, 224)
             img = qrcode.make(data=Data)
             img.save(name)
+    class Web():
+        def Open_website(URL):
+            try: import webbrowser 
+            except ImportError: Return_error("Import error. You must import webbrowser library.", 0, 230)
+            webbrowser.open(url=URL)
