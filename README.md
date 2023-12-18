@@ -187,7 +187,7 @@ qr = hub.QR()
 qr.Create_QR(Data="https://www.github.com/tik-ten/Its_Hub/", name="qrcode.png")
 ```
 output: <br>
-
+<img src="Files\out5.png">
 
 # Links
 <ul>
