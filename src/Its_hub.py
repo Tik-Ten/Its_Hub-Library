@@ -50,7 +50,7 @@ ________________________________________________________________________________
 """)
     quit(exit_code)
 def __version__():
-    print("Its_Hub Library version is 0.1.2")
+    print("Its_Hub Library version is 0.1.3")
 class Its_Hub():
     print("YOU USING ***Its_Hub*** LIBRARY FOR DO SOMETHING IN THIS CODE.")
     def Faker(target):
@@ -174,24 +174,27 @@ ____________________________________________
             cursor.execute(f"""SELECT {SELECT} FROM {self.Table_name} WHERE {WHERE};""")
             return str(cursor.fetchall()[0][0])
     class Computer_Vision():
-        def Start_video(none, VideoCapture=0, Show=True, exit_button="q", Detect_Hands=False, Detect_Faces=False):
+        def Start_video(none, VideoCapture=0, Show=True, exit_button="q", Detect_Hands=False, Detect_Faces=False, Detect_Pose=False):
             try: import cv2 as cv 
             except ImportError: Return_error("Import error.  You must install opencv library with: \npip install opencv-python", 0, 179)
-            if Detect_Hands != False or Detect_Faces != False: 
+            if Detect_Hands != False or Detect_Faces != False or Detect_Pose != False: 
                 try: 
                     from cvzone.HandTrackingModule import HandDetector
                     from cvzone.FaceDetectionModule import FaceDetector
-                except ImportError: Return_error("Import error.  You must install cvzone library with: \npip install cvzone", 0, 184)
+                    from cvzone.PoseModule import PoseDetector
+                except ImportError: Return_error("Import error.  You must install cvzone library with: \npip install cvzone", 0, 185)
             cap = cv.VideoCapture(VideoCapture)
             cap = cv.VideoCapture(0)
             try:
                 Hand_detector = HandDetector()
                 Face_detector = FaceDetector()
-            except: print("Detect Hand or Face is no able.")
+                Pose_detector = PoseDetector()
+            except: print("Detect Hand or Face or Pose is no able.")
             while True:
                 _, frame = cap.read()
                 if Detect_Hands != False:  _, frame = Hand_detector.findHands(frame)
                 if Detect_Faces != False: frame, _ = Face_detector.findFaces(frame)
+                if Detect_Pose != False: frame = Pose_detector.findPose(frame)
                 if Show == True: cv.imshow("Its webcam video! from Its_Hub library.", frame)
                 else: pass
                 cv.waitKey(1)
