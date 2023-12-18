@@ -3,3 +3,4 @@ tkhtmlview
 cvzone
 opencv-python
 pyttsx3
+qrcode
