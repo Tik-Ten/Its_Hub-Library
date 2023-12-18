@@ -175,7 +175,7 @@ ____________________________________________
     class Computer_Vision():
         def Start_video(none, VideoCapture=0, Show=True, exit_button="q"):
             try: import cv2 as cv 
-            except ImportError: Return_error("Import error.  You must install opencv library with: \npip install opencv-python")
+            except ImportError: Return_error("Import error.  You must install opencv library with: \npip install opencv-python", 0, 178)
             cap = cv.VideoCapture(VideoCapture)
             while True:
                 _, frame = cap.read()
