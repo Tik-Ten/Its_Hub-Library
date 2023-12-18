@@ -122,3 +122,10 @@ sql.Create_Table()
 sql = hub.SQL("Users", "'Name', 'Email', 'Password'") # You most write Table_name and Table_Attributes and you can write the Database_address, and Database_name
 sql.Save_in_database("'Farbod Parkhooi', 'your@email.com', 'Example@2023'")
 ```
+
+### Read_database
+```Python
+sql = hub.SQL("Users", "'Name', 'Email', 'Password'") # You most write Table_name and Table_Attributes and you can write the Database_address, and Database_name
+search_result = sql.Read_database("Email", "Name='Farbod Parkhooi'")
+print(search_result)
+```
