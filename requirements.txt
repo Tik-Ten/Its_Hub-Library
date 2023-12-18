@@ -1,3 +1,5 @@
 Faker
 tkhtmlview
 sqlite3
+cvzone
+opencv-python

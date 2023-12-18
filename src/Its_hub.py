@@ -174,9 +174,14 @@ ____________________________________________
             cursor.execute(f"""SELECT {SELECT} FROM {self.Table_name} WHERE {WHERE};""")
             return str(cursor.fetchall()[0][0])
     class Computer_Vision():
-        def Start_video(none, VideoCapture=0, Show=True, exit_button="q"):
+        def Start_video(none, VideoCapture=0, Show=True, exit_button="q", Detect_Hands=False, Detect_Faces=False):
             try: import cv2 as cv 
             except ImportError: Return_error("Import error.  You must install opencv library with: \npip install opencv-python", 0, 179)
+            if Detect_Hands != False or Detect_Faces != False: 
+                try: 
+                    from cvzone.HandTrackingModule import HandDetector
+                    from cvzone.FaceMeshModule import FaceMeshDetector
+                except ImportError: Return_error("Import error.  You must install cvzone library with: \npip install cvzone", 0, 184)
             cap = cv.VideoCapture(VideoCapture)
             while True:
                 _, frame = cap.read()
