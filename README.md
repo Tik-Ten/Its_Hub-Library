@@ -1,4 +1,4 @@
-# Version: 0.0.9
+# Version: 0.1.0
 
 <h1>Intro </h1>
 <p>
@@ -56,6 +56,7 @@ Its_Hub Library version is 0.0.9
     <li><a href="#Fake_profile">Fake_profile</a></li>
     <li><a href="#Mini">Mini</a></li>
     <li><a href="#SQL">SQL </a></li>
+    <li><a href="#Computer_Vision">Computer_Vision </a></li>
 </ul>
 
 <h2>Use Libraries </h2>
@@ -131,4 +132,13 @@ sql.Save_in_database("'Farbod Parkhooi', 'your@email.com', 'Example@2023'")
 sql = hub.SQL("Users", "'Name', 'Email', 'Password'") # You must write Table_name and Table_Attributes and you can write the Database_address, and Database_name
 search_result = sql.Read_database("Email", "Name='Farbod Parkhooi'")
 print(search_result)
+```
+
+# Computer_Vision
+In this class, I use CV2 and CVZone to use a computer webcam.
+
+### Start_Video
+```Python
+cv = h.Computer_Vision()
+cv.Start_video(VideoCapture=0, Show=True, exit_button="q")
 ```
