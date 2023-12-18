@@ -50,7 +50,7 @@ ________________________________________________________________________________
 """)
     quit(exit_code)
 def __version__():
-    print("Its_Hub Library version is 0.1.3")
+    print("Its_Hub Library version is 0.1.4")
 class Its_Hub():
     print("YOU USING ***Its_Hub*** LIBRARY FOR DO SOMETHING IN THIS CODE.")
     def Faker(target):
@@ -207,7 +207,7 @@ ____________________________________________
             self.text = text
             self.speed = speed
             self.gender = gender
-        def Say(self, save_voice=False, File_name=None):
+        def Say(self, save_voice=False, File_name="voice.mp3"):
             try: import pyttsx3
             except ImportError: Return_error("Import error. You must import pyttsx3 library with: \npip install pyttsx3", 0, 212)
             engine = pyttsx3.init()
