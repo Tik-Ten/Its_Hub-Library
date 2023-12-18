@@ -28,8 +28,11 @@ For download this library:
 >>> cd Its_Hub
 >>> pip install -r requirements.txt
 >>> python setup.py <Your python libraries address>
+>>> cd ...
+>>> rmdir /s Its_Hub
 ```
 example for python libraries address: <b>"C:/Users/Farbod Parkhooi/AppData/Local/Programs/Python/Python311/Lib" </b>
+You must remove the Its_Hub directory to install other updates
 
 # How to remove
 To remove this app:
@@ -66,11 +69,11 @@ hub = Its_Hub()
 # Faker
 For use Faker:
 ```Python
-Its_Hub.Faker(target="") # "first_name" or "last_name" or "name" or "phone_number" or "address" or "profile" or "job" or "company" or "website" or "blood_group"
+Its_Hub.Faker(target="") # "first_name" or "last_name" or "name" or "phone_number" or "address" or "profile" or "job" or "Company" or "website" or "blood_group"
 
 # You can print that:
 print(Its_Hub.Faker(target="name"))
-# and you can save taht in a value
+# and you can save that in a value
 name = Its_Hub.Faker(target="name") 
 ```
 
@@ -107,25 +110,25 @@ print(count_ans)
 # SQL
 ### Create_database
 ```Python
-sql = hub.SQL("Users", "'Name', 'Email', 'Password'") # You most write Table_name and Table_Attributes and you can write the Database_address, and Database_name
+sql = hub.SQL("Users", "'Name', 'Email', 'Password'") # You must write Table_name and Table_Attributes and you can write the Database_address, and Database_name
 sql.Create_database()
 ```
 
 ### Create_Table
 ```Python
-sql = hub.SQL("Users", "'Name', 'Email', 'Password'") # You most write Table_name and Table_Attributes and you can write the Database_address, and Database_name
+sql = hub.SQL("Users", "'Name', 'Email', 'Password'") # You must write Table_name and Table_Attributes and you can write the Database_address, and Database_name
 sql.Create_Table()
 ```
 
 ### Save_in_database
 ```Python
-sql = hub.SQL("Users", "'Name', 'Email', 'Password'") # You most write Table_name and Table_Attributes and you can write the Database_address, and Database_name
+sql = hub.SQL("Users", "'Name', 'Email', 'Password'") # You must write Table_name and Table_Attributes and you can write the Database_address, and Database_name
 sql.Save_in_database("'Farbod Parkhooi', 'your@email.com', 'Example@2023'")
 ```
 
 ### Read_database
 ```Python
-sql = hub.SQL("Users", "'Name', 'Email', 'Password'") # You most write Table_name and Table_Attributes and you can write the Database_address, and Database_name
+sql = hub.SQL("Users", "'Name', 'Email', 'Password'") # You must write Table_name and Table_Attributes and you can write the Database_address, and Database_name
 search_result = sql.Read_database("Email", "Name='Farbod Parkhooi'")
 print(search_result)
 ```
