@@ -44,7 +44,7 @@ example for python libraries address: <b>"C:/Users/Farbod Parkhooi/AppData/Local
 
 # Check
 ```Python
-from Its_Hub import Its_Hub
+import Its_Hub
 Its_Hub.__version__()
 # Output:
 Its_Hub Library version is 0.0.9
