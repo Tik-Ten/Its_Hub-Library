@@ -58,14 +58,14 @@ Its_Hub Library version is 0.0.9
 <h2>Use Libraries </h2>
     For use Its_Hub you can use This:
 
-```python
+```Python
 from Its_Hub import Its_Hub
 hub = Its_Hub()
 ````
 
 # Faker
 For use Faker:
-```python
+```Python
 Its_Hub.Faker(target="") # "first_name" or "last_name" or "name" or "phone_number" or "address" or "profile" or "job" or "company" or "website" or "blood_group"
 
 # You can print that:
@@ -76,7 +76,7 @@ name = Its_Hub.Faker(target="name")
 
 # Fake_profile 
 ### Show a digital fake profile
-```python
+```Python
 profile = hub.Fake_profile() # You can customize job, company, name, and ...
 profile.Create_result(profile.Create_profile()) 
 ```
@@ -85,7 +85,7 @@ output:
 <img src="Files\out1.png">
 
 ### Create list of a fake profile
-```python
+```Python
 profile = hub.Fake_profile()
 Profile_list = profile.Create_profile()
 print(Profile_list)
@@ -99,26 +99,26 @@ print(ans)
 ```
 ### Count
 You can count and plus with this function.
-```python
+```Python
 count_ans = hub.Mini.Count(0, 5)
 print(count_ans)
 ```
 
 # SQL
 ### Create_database
-```python
+```Python
 sql = hub.SQL("Users", "'Name', 'Email', 'Password'") # You most write Table_name and Table_Attributes and you can write the Database_address, and Database_name
 sql.Create_database()
 ```
 
 ### Create_Table
-```python
+```Python
 sql = hub.SQL("Users", "'Name', 'Email', 'Password'") # You most write Table_name and Table_Attributes and you can write the Database_address, and Database_name
 sql.Create_Table()
 ```
 
 ### Save_in_database
-```python
+```Python
 sql = hub.SQL("Users", "'Name', 'Email', 'Password'") # You most write Table_name and Table_Attributes and you can write the Database_address, and Database_name
 sql.Save_in_database("'Farbod Parkhooi', 'your@email.com', 'Example@2023'")
 ```
