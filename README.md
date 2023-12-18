@@ -143,8 +143,18 @@ cv = hub.Computer_Vision()
 cv.Start_video(VideoCapture=0, Show=True, exit_button="q")
 ```
 
+### Detect Hand
 
+```Python
+cv = hub.Computer_Vision()
+cv.Start_video(VideoCapture=0, Show=True, exit_button="q", Detect_Hands=True)
+```
 
+### Detect Faces
+```Python
+cv = hub.Computer_Vision()
+cv.Start_video(VideoCapture=0, Show=True, exit_button="q", Detect_Faces=True)
+```
 
 
 # Links
