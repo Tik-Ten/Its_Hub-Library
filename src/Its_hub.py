@@ -31,7 +31,8 @@ TKHTMLVIEW
 ...
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 My name is Farbod Parkhooi(Or you can call me Tik Ten)
-This is my Github link: https://www.github.com/tik-ten/Its_Hub
+This is Its_Hub doucuments: https://www.github.com/tik-ten/Its_Hub
+This is my Github link: https://www.github.com/tik-ten
 Thanks for use.
 """
 def Return_error(error, exit_code, line): 
@@ -54,7 +55,7 @@ class Its_Hub():
     print("YOU USING ***Its_Hub*** LIBRARY FOR DO SOMETHING IN THIS CODE.")
     def Faker(target):
         try: from faker import Faker
-        except ImportError: Return_error("import error. \nYou must install Faker library with: \npip3 install Faker", 0, 55)
+        except ImportError: Return_error("import error. \nYou must install Faker library with: \npip3 install Faker", 0, 58)
         faker = Faker()
         try:
             if target == "first_name": return faker.first_name()
@@ -67,7 +68,7 @@ class Its_Hub():
             elif target == "company": return faker.company()
             elif target == "website": return faker.website()
             elif target == "blood_group": return faker.blood_group()
-        except AttributeError: Return_error("Attribute error. Your faker library has a problem.", 0, "58 -> 67")
+        except AttributeError: Return_error("Attribute error. Your faker library has a problem.", 0, "61 -> 70")
     class Fake_profile():
         def __init__(self, Gender="M", Company=None, blood_group=None, website=None, username=None, name=None, sex=None, address=None, Job=None, mail=None):
             self.gender = Gender
@@ -128,12 +129,12 @@ ____________________________________________
     class Mini():
         def Plus(number, plus):
             try: return number + int(plus)
-            except: Return_error("Value error. Plus isn't int!", 0, 129)
+            except: Return_error("Value error. Plus isn't int!", 0, 132)
         def Count(start_number, range_num):
             try: 
                 start_number = int(start_number)
                 range_num = int(range_num)
-            except ValueError: Return_error("Value error. Start_number or range_num isn't int!", 0, 134)
+            except ValueError: Return_error("Value error. Start_number or range_num isn't int!", 0, 137)
             for i in range(range_num):
                 start_number = start_number + 1
             return start_number
@@ -145,12 +146,12 @@ ____________________________________________
             self.Name = Database_name
         def Create_database(self):
             try: import sqlite3 as SQL
-            except ImportError: Return_error("Import error. You must install sqlite3.", 0, 145)
+            except ImportError: Return_error("Import error. You must install sqlite3.", 0, 149)
             connect = SQL.connect(self.Address + self.Name + ".db")
             connect.close()
         def Create_Table(self):
             try: import sqlite3 as SQL
-            except ImportError: Return_error("Import error. You must install sqlite3.", 0, 151)
+            except ImportError: Return_error("Import error. You must install sqlite3.", 0, 154)
             connect = SQL.connect(self.Address + self.Name + ".db")
             cursor = connect.cursor()
             cursor.execute(f"""CREATE TABLE IF NOT EXISTS {self.Table_name} ({self.Table_Attributes});""")
@@ -158,7 +159,7 @@ ____________________________________________
             connect.close()
         def Save_in_database(self, Attributes):
             try: import sqlite3 as SQL
-            except ImportError: Return_error("Import error. You must install sqlite3.", 0, 161)
+            except ImportError: Return_error("Import error. You must install sqlite3.", 0, 162)
             connect = SQL.connect(self.Address + self.Name + ".db")
             cursor = connect.cursor()
             cursor.execute(f"""INSERT INTO {self.Table_name} ({self.Table_Attributes})
@@ -175,7 +176,7 @@ ____________________________________________
     class Computer_Vision():
         def Start_video(none, VideoCapture=0, Show=True, exit_button="q"):
             try: import cv2 as cv 
-            except ImportError: Return_error("Import error.  You must install opencv library with: \npip install opencv-python", 0, 178)
+            except ImportError: Return_error("Import error.  You must install opencv library with: \npip install opencv-python", 0, 179)
             cap = cv.VideoCapture(VideoCapture)
             while True:
                 _, frame = cap.read()
