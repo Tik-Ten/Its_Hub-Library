@@ -2,3 +2,4 @@ Faker
 tkhtmlview
 cvzone
 opencv-python
+pyttsx3
