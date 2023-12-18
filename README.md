@@ -1,4 +1,4 @@
-# Version: 0.1.4
+# Version: 0.1.5
 
 <h1>Intro </h1>
 <p>
@@ -58,6 +58,7 @@ Its_Hub Library version is 0.0.9
     <li><a href="#SQL">SQL </a></li>
     <li><a href="#Computer_Vision">Computer_Vision </a></li>
     <li><a href="#Voice">Voice</a></li>
+    <li><a href="#QR">QR</a></li>
 </ul>
 
 <h2>Use Libraries </h2>
@@ -150,7 +151,7 @@ cv.Start_video(VideoCapture=0, Show=True, exit_button="q")
 cv = hub.Computer_Vision()
 cv.Start_video(VideoCapture=0, Show=True, exit_button="q", Detect_Hands=True)
 ```
-output:
+output: <br>
 <img src="Files\out3.png" />
 
 ### Detect Faces
@@ -158,7 +159,7 @@ output:
 cv = hub.Computer_Vision()
 cv.Start_video(VideoCapture=0, Show=True, exit_button="q", Detect_Faces=True)
 ```
-output:
+output: <br>
 <img src="Files\out4.png" />
 
 ### Detect Pose
@@ -177,6 +178,16 @@ voice.Say()
 # Also you can save the generated voice
 voice.Say(save_voice=True, File_name="voice.mp3")
 ```
+
+# QR
+
+### Create_QR
+```Python
+qr = hub.QR()
+qr.Create_QR(Data="https://www.github.com/tik-ten/Its_Hub/", name="qrcode.png")
+```
+output: <br>
+
 
 # Links
 <ul>
