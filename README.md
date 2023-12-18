@@ -149,12 +149,16 @@ cv.Start_video(VideoCapture=0, Show=True, exit_button="q")
 cv = hub.Computer_Vision()
 cv.Start_video(VideoCapture=0, Show=True, exit_button="q", Detect_Hands=True)
 ```
+output:
+<img src="Files\out3.png" />
 
 ### Detect Faces
 ```Python
 cv = hub.Computer_Vision()
 cv.Start_video(VideoCapture=0, Show=True, exit_button="q", Detect_Faces=True)
 ```
+output:
+<img src="Files\out4.png" />
 
 ### Detect Pose
 ```Python
