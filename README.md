@@ -1,4 +1,4 @@
-# Version: 0.1.3
+# Version: 0.1.4
 
 <h1>Intro </h1>
 <p>
@@ -57,6 +57,7 @@ Its_Hub Library version is 0.0.9
     <li><a href="#Mini">Mini</a></li>
     <li><a href="#SQL">SQL </a></li>
     <li><a href="#Computer_Vision">Computer_Vision </a></li>
+    <li><a href="#Voice">Voice</a></li>
 </ul>
 
 <h2>Use Libraries </h2>
@@ -164,6 +165,17 @@ output:
 ```Python
 cv = hub.Computer_Vision() 
 cv.Start_video(VideoCapture=0, Show=True, exit_button="q", Detect_Pose=True)
+```
+
+# Voice
+
+### Say
+```Python
+voice = hub.Voice("You text here", speed=125, gender="M") # for gender you can use F too
+voice.Say()
+
+# Also you can save the generated voice
+voice.Say(save_voice=True, File_name="voice.mp3")
 ```
 
 # Links
