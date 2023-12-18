@@ -172,7 +172,3 @@ ____________________________________________
             cursor = connect.cursor()
             cursor.execute(f"""SELECT {SELECT} FROM {self.Table_name} WHERE {WHERE};""")
             return str(cursor.fetchall()[0][0])
-
-hub = Its_Hub()
-sql = hub.SQL("Users", "'name', 'email', 'password'")
-print(sql.Read_database("email", "name='Farbod Parkhooi'"))
