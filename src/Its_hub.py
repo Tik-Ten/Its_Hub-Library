@@ -54,7 +54,7 @@ class Its_Hub():
     print("YOU USING ***Its_Hub*** LIBRARY FOR DO SOMETHING IN THIS CODE.")
     def Faker(target):
         try: from faker import Faker
-        except ImportError: Return_error("import error. \nYou most install Faker library with: \npip3 install Faker", 0, 55)
+        except ImportError: Return_error("import error. \nYou must install Faker library with: \npip3 install Faker", 0, 55)
         faker = Faker()
         try:
             if target == "first_name": return faker.first_name()
@@ -145,12 +145,12 @@ ____________________________________________
             self.Name = Database_name
         def Create_database(self):
             try: import sqlite3 as SQL
-            except ImportError: Return_error("Import error. You most install sqlite3.", 0, 145)
+            except ImportError: Return_error("Import error. You must install sqlite3.", 0, 145)
             connect = SQL.connect(self.Address + self.Name + ".db")
             connect.close()
         def Create_Table(self):
             try: import sqlite3 as SQL
-            except ImportError: Return_error("Import error. You most install sqlite3.", 0, 151)
+            except ImportError: Return_error("Import error. You must install sqlite3.", 0, 151)
             connect = SQL.connect(self.Address + self.Name + ".db")
             cursor = connect.cursor()
             cursor.execute(f"""CREATE TABLE IF NOT EXISTS {self.Table_name} ({self.Table_Attributes});""")
@@ -158,7 +158,7 @@ ____________________________________________
             connect.close()
         def Save_in_database(self, Attributes):
             try: import sqlite3 as SQL
-            except ImportError: Return_error("Import error. You most install sqlite3.", 0, 161)
+            except ImportError: Return_error("Import error. You must install sqlite3.", 0, 161)
             connect = SQL.connect(self.Address + self.Name + ".db")
             cursor = connect.cursor()
             cursor.execute(f"""INSERT INTO {self.Table_name} ({self.Table_Attributes})
@@ -167,8 +167,23 @@ ____________________________________________
             connect.close()
         def Read_database(self, SELECT, WHERE=None):
             try: import sqlite3 as SQL
-            except ImportError: Return_error("Import error. You most install sqlite3.", 0, 171)
+            except ImportError: Return_error("Import error. You must install sqlite3.", 0, 171)
             connect = SQL.connect(self.Address + self.Name + ".db")
             cursor = connect.cursor()
             cursor.execute(f"""SELECT {SELECT} FROM {self.Table_name} WHERE {WHERE};""")
             return str(cursor.fetchall()[0][0])
+    class Computer_Vision():
+        def Start_video(VideoCapture=0, Show=True, exit_button="q"):
+            try: import cv2 as cv 
+            except ImportError: Return_error("Import error.  You must")
+            cap = cv.VideoCapture(VideoCapture)
+            while True:
+                _, frame = cap.read()
+
+                if Show == True: cv.imshow("Its webcam video! from Its_Hub library.", frame)
+                else: pass
+                cv.waitKey()
+                if cv.waitKey(1) & 0xFF == ord(exit_button): 
+                    break
+            cap.release() 
+            cv.destroyAllWindows()
