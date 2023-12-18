@@ -158,10 +158,21 @@ ____________________________________________
             connect.close()
         def Save_in_database(self, Attributes):
             try: import sqlite3 as SQL
-            except ImportError: Return_error("Import error. You most install sqlite3.", 0, 160)
+            except ImportError: Return_error("Import error. You most install sqlite3.", 0, 161)
             connect = SQL.connect(self.Address + self.Name + ".db")
             cursor = connect.cursor()
             cursor.execute(f"""INSERT INTO {self.Table_name} ({self.Table_Attributes})
                             VALUES ({Attributes})""")
             connect.commit()
             connect.close()
+        def Read_database(self, SELECT, WHERE=None):
+            try: import sqlite3 as SQL
+            except ImportError: Return_error("Import error. You most install sqlite3.", 0, 171)
+            connect = SQL.connect(self.Address + self.Name + ".db")
+            cursor = connect.cursor()
+            cursor.execute(f"""SELECT {SELECT} FROM {self.Table_name} WHERE {WHERE};""")
+            return str(cursor.fetchall()[0][0])
+
+hub = Its_Hub()
+sql = hub.SQL("Users", "'name', 'email', 'password'")
+print(sql.Read_database("email", "name='Farbod Parkhooi'"))
