@@ -261,7 +261,7 @@ ____________________________________________
             except ImportError: Return_error("Import error. You must import os and shutil librar /:", 0, 247) 
             address = GET_ADDRESS(File_address=File_address, File_name=File_name)
             return os.path.exists(address)
-        def Get_app_size(_, File_address="", File_name="text.txt"):
+        def Get_file_size(_, File_address="", File_name="text.txt"):
             try: import os
             except ImportError: Return_error("Import error. You must import os and shutil librar /:", 0, 247) 
             address = GET_ADDRESS(File_address=File_address, File_name=File_name)
