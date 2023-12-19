@@ -1,4 +1,4 @@
-# Version: 0.1.5
+# Version: 0.1.6
 
 <h1>Intro </h1>
 <p>
@@ -59,6 +59,7 @@ Its_Hub Library version is 0.0.9
     <li><a href="#Computer_Vision">Computer_Vision </a></li>
     <li><a href="#Voice">Voice</a></li>
     <li><a href="#QR">QR</a></li>
+    <li><a href="#Web">Web</a></li>
 </ul>
 
 <h2>Use Libraries </h2>
@@ -188,6 +189,13 @@ qr.Create_QR(Data="https://www.github.com/tik-ten/Its_Hub/", name="qrcode.png")
 ```
 output: <br>
 <img src="Files\out5.png">
+
+# Web
+
+### Open_website
+```Python
+hub.Web.Open_website(URL="https://simple.wikipedia.org/w/index.php?title=User%3AFarbod_Parkhooi%2FIts_Hub_Library")
+```
 
 # Links
 <ul>
