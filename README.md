@@ -250,6 +250,13 @@ print(result)
 # True or False
 ```
 
+### Get_file_size
+```Python
+os = hub.OS()
+size = os.Get_app_size(File_address="", File_name="text.txt")
+print(size)
+```
+
 # Links
 <ul>
     <li><a href="https://simple.wikipedia.org/w/index.php?title=User%3AFarbod_Parkhooi%2FIts_Hub_Library">Wikipedia</a></li>
