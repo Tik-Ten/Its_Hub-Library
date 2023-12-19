@@ -1,4 +1,4 @@
-# Version: 0.2.1
+# Version: 0.2.2
 
 <h1>Intro </h1>
 <p>
@@ -237,7 +237,17 @@ text = os.Read_file(File_address="", File_name="text.txt")
 print(text)
 
 # Output:
-# You file's text
+# Your file's text
+```
+
+### Check_exist
+```Python
+os = hub.OS()
+result = os.Check_exist(File_address="", File_name="text.txt")
+print(result)
+
+# Output:
+# True or False
 ```
 
 # Links
