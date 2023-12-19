@@ -50,7 +50,11 @@ ________________________________________________________________________________
 """)
     quit(exit_code)
 def __version__():
-    print("Its_Hub Library version is 0.2.2")
+    print("Its_Hub Library version is 0.2.3")
+def GET_ADDRESS(File_address="", File_name="text.txt"):
+    if File_address != "": address = File_address + File_name
+    else: address = File_name
+    return address
 class Its_Hub():
     print("YOU USING ***Its_Hub*** LIBRARY FOR DO SOMETHING IN THIS CODE.")
     def Faker(target):
@@ -249,14 +253,16 @@ ____________________________________________
         def Read_file(_, File_address="", File_name="text.txt"):
             try: import os
             except ImportError: Return_error("Import error. You must import os and shutil librar /:", 0, 247) 
-            if File_address != "": 
-                address = File_address + File_name
-                file = open(address, 'r')
-            else: file = open(File_name, 'r')
+            address = GET_ADDRESS(File_address=File_address, File_name=File_name)
+            file = open(address, 'r')
             return file.read()
         def Check_exist(_, File_address="", File_name="text.txt"):
             try: import os
             except ImportError: Return_error("Import error. You must import os and shutil librar /:", 0, 247) 
-            if File_address != "": address = File_address + File_name
-            else: address = File_name
+            address = GET_ADDRESS(File_address=File_address, File_name=File_name)
             return os.path.exists(address)
+        def Get_app_size(_, File_address="", File_name="text.txt"):
+            try: import os
+            except ImportError: Return_error("Import error. You must import os and shutil librar /:", 0, 247) 
+            address = GET_ADDRESS(File_address=File_address, File_name=File_name)
+            return str(os.path.getsize(address)) + " bytes"
