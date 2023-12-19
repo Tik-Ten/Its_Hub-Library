@@ -50,7 +50,7 @@ ________________________________________________________________________________
 """)
     quit(exit_code)
 def __version__():
-    print("Its_Hub Library version is 0.1.6")
+    print("Its_Hub Library version is 0.1.9")
 class Its_Hub():
     print("YOU USING ***Its_Hub*** LIBRARY FOR DO SOMETHING IN THIS CODE.")
     def Faker(target):
@@ -174,7 +174,7 @@ ____________________________________________
             cursor.execute(f"""SELECT {SELECT} FROM {self.Table_name} WHERE {WHERE};""")
             return str(cursor.fetchall()[0][0])
     class Computer_Vision():
-        def Start_video(none, VideoCapture=0, Show=True, exit_button="q", Detect_Hands=False, Detect_Faces=False, Detect_Pose=False):
+        def Start_video(_, VideoCapture=0, Show=True, exit_button="q", Detect_Hands=False, Detect_Faces=False, Detect_Pose=False):
             try: import cv2 as cv 
             except ImportError: Return_error("Import error.  You must install opencv library with: \npip install opencv-python", 0, 179)
             if Detect_Hands != False or Detect_Faces != False or Detect_Pose != False: 
@@ -219,7 +219,7 @@ ____________________________________________
             if save_voice != False: engine.save_to_file(self.text, File_name)
             engine.runAndWait()
     class QR():
-        def Create_QR(none, Data, name="qrcode.png"):
+        def Create_QR(_, Data, name="qrcode.png"):
             try: import qrcode
             except ImportError: Return_error("Import error. You must download qrcode library with: \npip install qrcode", 0, 224)
             img = qrcode.make(data=Data)
@@ -229,3 +229,16 @@ ____________________________________________
             try: import webbrowser 
             except ImportError: Return_error("Import error. You must import webbrowser library.", 0, 230)
             webbrowser.open(url=URL)
+    class OS():
+        def Remove_file(_, File_address):
+            try: import os
+            except ImportError: Return_error("Import error. You must import os and shutil librar /:", 0, 235) 
+            os.remove(File_address)           
+        def Remove_dir(_, Dir_address):
+            try: import os
+            except ImportError: Return_error("Import error. You must import os and shutil librar /:", 0, 235) 
+            os.removedirs(Dir_address)
+        def Create_file(_, File_name, File_address=""):
+            if File_address != "": file = open(f"{File_address}\\{File_name}", "w")
+            else: file = open(f"{File_name}", "w")
+            file.close()
