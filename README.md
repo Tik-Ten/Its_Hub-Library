@@ -61,6 +61,8 @@ Its_Hub Library version is 0.0.9
     <li><a href="#QR">QR</a></li>
     <li><a href="#Web">Web</a></li>
     <li><a href="#OS">OS</a></li>
+    <li><a href="#Links">Links </a></li>
+    <li><a href="#Donate">Donate </a></li>
 </ul>
 
 <h2>Use Libraries </h2>
@@ -243,3 +245,6 @@ print(text)
     <li><a href="https://simple.wikipedia.org/w/index.php?title=User%3AFarbod_Parkhooi%2FIts_Hub_Library">Wikipedia</a></li>
     <li><a href="https://www.aparat.com/ImRick">Aparat</a></li>
 </ul>  
+
+# Donate
+<p> To donate me you can fork this repo or start it! :)</p>
