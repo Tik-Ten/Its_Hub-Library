@@ -50,7 +50,7 @@ ________________________________________________________________________________
 """)
     quit(exit_code)
 def __version__():
-    print("Its_Hub Library version is 0.2.1")
+    print("Its_Hub Library version is 0.2.2")
 class Its_Hub():
     print("YOU USING ***Its_Hub*** LIBRARY FOR DO SOMETHING IN THIS CODE.")
     def Faker(target):
@@ -254,3 +254,9 @@ ____________________________________________
                 file = open(address, 'r')
             else: file = open(File_name, 'r')
             return file.read()
+        def Check_exist(_, File_address="", File_name="text.txt"):
+            try: import os
+            except ImportError: Return_error("Import error. You must import os and shutil librar /:", 0, 247) 
+            if File_address != "": address = File_address + File_name
+            else: address = File_name
+            return os.path.exists(address)
