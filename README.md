@@ -1,4 +1,4 @@
-# Version: 0.1.6
+# Version: 0.1.9
 
 <h1>Intro </h1>
 <p>
@@ -60,6 +60,7 @@ Its_Hub Library version is 0.0.9
     <li><a href="#Voice">Voice</a></li>
     <li><a href="#QR">QR</a></li>
     <li><a href="#Web">Web</a></li>
+    <li><a href="#OS">OS</a></li>
 </ul>
 
 <h2>Use Libraries </h2>
@@ -195,6 +196,29 @@ output: <br>
 ### Open_website
 ```Python
 hub.Web.Open_website(URL="https://simple.wikipedia.org/w/index.php?title=User%3AFarbod_Parkhooi%2FIts_Hub_Library")
+```
+
+# OS
+
+### Remove_file
+```Python
+os = hub.OS()
+os.Remove_file(File_address="test.txt")
+```
+
+### Remove_dir
+```Python
+os = hub.OS()
+os.Remove_dir(Dir_address="C:\Users\Farbod Parkhooi\Test_dir")
+```
+
+### Create_file
+```Python
+os = hub.OS()
+os.Create_file(File_name="text.txt")
+
+# Also you can change the address of the file
+os.Create_file(File_name="text.txt", File_address="C:\Users\Farbod Parkhooi\Test_dir")
 ```
 
 # Links
