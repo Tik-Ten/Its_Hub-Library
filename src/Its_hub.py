@@ -50,7 +50,7 @@ ________________________________________________________________________________
 """)
     quit(exit_code)
 def __version__():
-    print("Its_Hub Library version is 0.1.9")
+    print("Its_Hub Library version is 0.2.1")
 class Its_Hub():
     print("YOU USING ***Its_Hub*** LIBRARY FOR DO SOMETHING IN THIS CODE.")
     def Faker(target):
@@ -242,3 +242,15 @@ ____________________________________________
             if File_address != "": file = open(f"{File_address}\\{File_name}", "w")
             else: file = open(f"{File_name}", "w")
             file.close()
+        def Get_code_address(_):
+            try: import os
+            except ImportError: Return_error("Import error. You must import os and shutil librar /:", 0, 247) 
+            return os.getcwd() 
+        def Read_file(_, File_address="", File_name="text.txt"):
+            try: import os
+            except ImportError: Return_error("Import error. You must import os and shutil librar /:", 0, 247) 
+            if File_address != "": 
+                address = File_address + File_name
+                file = open(address, 'r')
+            else: file = open(File_name, 'r')
+            return file.read()
