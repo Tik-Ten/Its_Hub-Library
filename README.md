@@ -1,10 +1,10 @@
-# Version: 0.1.9
+# Version: 0.2.1
 
 <h1>Intro </h1>
 <p>
 Its_Hub library. <br />
 This is a library with Other Libraries! (; <br />
-U Can Use This Library For Use Few Other Libraries. 4 Example:
+U Can Use This Library For Use a Few Other Libraries. 4 Example:
 <b>
 <ul>
     <li>Faker</li>
@@ -219,6 +219,23 @@ os.Create_file(File_name="text.txt")
 
 # Also you can change the address of the file
 os.Create_file(File_name="text.txt", File_address="C:\Users\Farbod Parkhooi\Test_dir")
+```
+
+### Get_code_address
+```Python
+os = hub.OS()
+code_address = os.Get_code_address()
+print(code_address)
+```
+
+### Read_file
+```Python
+os = hub.OS()
+text = os.Read_file(File_address="", File_name="text.txt")
+print(text)
+
+# Output:
+# You file's text
 ```
 
 # Links
