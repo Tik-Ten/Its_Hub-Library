@@ -59,7 +59,7 @@ class Its_Hub():
     print("YOU USING ***Its_Hub*** LIBRARY FOR DO SOMETHING IN THIS CODE.")
     def Faker(target):
         try: from faker import Faker
-        except ImportError: Return_error("import error. \nYou must install Faker library with: \npip3 install Faker", 0, 58)
+        except ImportError: Return_error("import error. \nYou must install Faker library with: \npip3 install Faker", 0, 62)
         faker = Faker()
         try:
             if target == "first_name": return faker.first_name()
@@ -72,7 +72,7 @@ class Its_Hub():
             elif target == "company": return faker.company()
             elif target == "website": return faker.website()
             elif target == "blood_group": return faker.blood_group()
-        except AttributeError: Return_error("Attribute error. Your faker library has a problem.", 0, "61 -> 70")
+        except AttributeError: Return_error("Attribute error. Your faker library has a problem.", 0, "65 -> 74")
     class Fake_profile():
         def __init__(self, Gender="M", Company=None, blood_group=None, website=None, username=None, name=None, sex=None, address=None, Job=None, mail=None):
             self.gender = Gender
@@ -133,12 +133,12 @@ ____________________________________________
     class Mini():
         def Plus(number, plus):
             try: return number + int(plus)
-            except: Return_error("Value error. Plus isn't int!", 0, 132)
+            except: Return_error("Value error. Plus isn't int!", 0, 136)
         def Count(start_number, range_num):
             try: 
                 start_number = int(start_number)
                 range_num = int(range_num)
-            except ValueError: Return_error("Value error. Start_number or range_num isn't int!", 0, 137)
+            except ValueError: Return_error("Value error. Start_number or range_num isn't int!", 0, 141)
             for i in range(range_num):
                 start_number = start_number + 1
             return start_number
@@ -150,12 +150,12 @@ ____________________________________________
             self.Name = Database_name
         def Create_database(self):
             try: import sqlite3 as SQL
-            except ImportError: Return_error("Import error. You must install sqlite3.", 0, 149)
+            except ImportError: Return_error("Import error. You must install sqlite3.", 0, 153)
             connect = SQL.connect(self.Address + self.Name + ".db")
             connect.close()
         def Create_Table(self):
             try: import sqlite3 as SQL
-            except ImportError: Return_error("Import error. You must install sqlite3.", 0, 154)
+            except ImportError: Return_error("Import error. You must install sqlite3.", 0, 158)
             connect = SQL.connect(self.Address + self.Name + ".db")
             cursor = connect.cursor()
             cursor.execute(f"""CREATE TABLE IF NOT EXISTS {self.Table_name} ({self.Table_Attributes});""")
@@ -163,7 +163,7 @@ ____________________________________________
             connect.close()
         def Save_in_database(self, Attributes):
             try: import sqlite3 as SQL
-            except ImportError: Return_error("Import error. You must install sqlite3.", 0, 162)
+            except ImportError: Return_error("Import error. You must install sqlite3.", 0, 166)
             connect = SQL.connect(self.Address + self.Name + ".db")
             cursor = connect.cursor()
             cursor.execute(f"""INSERT INTO {self.Table_name} ({self.Table_Attributes})
@@ -172,7 +172,7 @@ ____________________________________________
             connect.close()
         def Read_database(self, SELECT, WHERE=None):
             try: import sqlite3 as SQL
-            except ImportError: Return_error("Import error. You must install sqlite3.", 0, 171)
+            except ImportError: Return_error("Import error. You must install sqlite3.", 0, 175)
             connect = SQL.connect(self.Address + self.Name + ".db")
             cursor = connect.cursor()
             cursor.execute(f"""SELECT {SELECT} FROM {self.Table_name} WHERE {WHERE};""")
@@ -180,13 +180,13 @@ ____________________________________________
     class Computer_Vision():
         def Start_video(_, VideoCapture=0, Show=True, exit_button="q", Detect_Hands=False, Detect_Faces=False, Detect_Pose=False):
             try: import cv2 as cv 
-            except ImportError: Return_error("Import error.  You must install opencv library with: \npip install opencv-python", 0, 179)
+            except ImportError: Return_error("Import error.  You must install opencv library with: \npip install opencv-python", 0, 183)
             if Detect_Hands != False or Detect_Faces != False or Detect_Pose != False: 
                 try: 
                     from cvzone.HandTrackingModule import HandDetector
                     from cvzone.FaceDetectionModule import FaceDetector
                     from cvzone.PoseModule import PoseDetector
-                except ImportError: Return_error("Import error.  You must install cvzone library with: \npip install cvzone", 0, 185)
+                except ImportError: Return_error("Import error.  You must install cvzone library with: \npip install cvzone", 0, 189)
             cap = cv.VideoCapture(VideoCapture)
             cap = cv.VideoCapture(0)
             try:
@@ -213,7 +213,7 @@ ____________________________________________
             self.gender = gender
         def Say(self, save_voice=False, File_name="voice.mp3"):
             try: import pyttsx3
-            except ImportError: Return_error("Import error. You must import pyttsx3 library with: \npip install pyttsx3", 0, 212)
+            except ImportError: Return_error("Import error. You must import pyttsx3 library with: \npip install pyttsx3", 0, 216)
             engine = pyttsx3.init()
             engine.setProperty('rate', int(self.speed))
             voices = engine.getProperty('voices')
@@ -225,22 +225,22 @@ ____________________________________________
     class QR():
         def Create_QR(_, Data, name="qrcode.png"):
             try: import qrcode
-            except ImportError: Return_error("Import error. You must download qrcode library with: \npip install qrcode", 0, 224)
+            except ImportError: Return_error("Import error. You must download qrcode library with: \npip install qrcode", 0, 228)
             img = qrcode.make(data=Data)
             img.save(name)
     class Web():
         def Open_website(URL):
             try: import webbrowser 
-            except ImportError: Return_error("Import error. You must import webbrowser library.", 0, 230)
+            except ImportError: Return_error("Import error. You must import webbrowser library.", 0, 234)
             webbrowser.open(url=URL)
     class OS():
         def Remove_file(_, File_address):
             try: import os
-            except ImportError: Return_error("Import error. You must import os and shutil librar /:", 0, 235) 
+            except ImportError: Return_error("Import error. You must import os and shutil librar /:", 0, 239) 
             os.remove(File_address)           
         def Remove_dir(_, Dir_address):
             try: import os
-            except ImportError: Return_error("Import error. You must import os and shutil librar /:", 0, 235) 
+            except ImportError: Return_error("Import error. You must import os and shutil librar /:", 0, 243) 
             os.removedirs(Dir_address)
         def Create_file(_, File_name, File_address=""):
             if File_address != "": file = open(f"{File_address}\\{File_name}", "w")
@@ -248,21 +248,21 @@ ____________________________________________
             file.close()
         def Get_code_address(_):
             try: import os
-            except ImportError: Return_error("Import error. You must import os and shutil librar /:", 0, 247) 
+            except ImportError: Return_error("Import error. You must import os and shutil librar /:", 0, 251) 
             return os.getcwd() 
         def Read_file(_, File_address="", File_name="text.txt"):
             try: import os
-            except ImportError: Return_error("Import error. You must import os and shutil librar /:", 0, 247) 
+            except ImportError: Return_error("Import error. You must import os and shutil librar /:", 0, 255) 
             address = GET_ADDRESS(File_address=File_address, File_name=File_name)
             file = open(address, 'r')
             return file.read()
         def Check_exist(_, File_address="", File_name="text.txt"):
             try: import os
-            except ImportError: Return_error("Import error. You must import os and shutil librar /:", 0, 247) 
+            except ImportError: Return_error("Import error. You must import os and shutil librar /:", 0, 261) 
             address = GET_ADDRESS(File_address=File_address, File_name=File_name)
             return os.path.exists(address)
         def Get_file_size(_, File_address="", File_name="text.txt"):
             try: import os
-            except ImportError: Return_error("Import error. You must import os and shutil librar /:", 0, 247) 
+            except ImportError: Return_error("Import error. You must import os and shutil librar /:", 0, 266) 
             address = GET_ADDRESS(File_address=File_address, File_name=File_name)
             return str(os.path.getsize(address)) + " bytes"
