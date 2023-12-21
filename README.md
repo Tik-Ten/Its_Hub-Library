@@ -264,4 +264,4 @@ print(size)
 </ul>  
 
 # Donate
-<p> To donate me you can fork this repo or start it! :)</p>
+<p> To donate me you can fork this repo or star it! :)</p>
