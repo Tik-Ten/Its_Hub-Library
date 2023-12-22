@@ -76,7 +76,7 @@ hub = Its_Hub()
 # Faker
 For use Faker:
 ```Python
-Its_Hub.Faker(target="") # "first_name" or "last_name" or "name" or "phone_number" or "address" or "profile" or "job" or "Company" or "website" or "blood_group"
+Its_Hub.Faker(target="") # "first_name" or "last_name" or "name" or "phone_number" or "address" or "profile" or "job" or "company" 
 
 # You can print that:
 print(Its_Hub.Faker(target="name"))
