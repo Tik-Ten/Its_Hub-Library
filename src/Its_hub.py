@@ -70,9 +70,7 @@ class Its_Hub():
             elif target == "profile": return faker.profile()
             elif target == "job": return faker.job()
             elif target == "company": return faker.company()
-            elif target == "website": return faker.website()
-            elif target == "blood_group": return faker.blood_group()
-        except AttributeError: Return_error("Attribute error. Your faker library has a problem.", 0, "65 -> 74")
+        except AttributeError: Return_error("Attribute error. Your faker library has a problem.", 0, "65 -> 72")
     class Fake_profile():
         def __init__(self, Gender="M", Company=None, blood_group=None, website=None, username=None, name=None, sex=None, address=None, Job=None, mail=None):
             self.gender = Gender
