@@ -264,3 +264,34 @@ ____________________________________________
             except ImportError: Return_error("Import error. You must import os and shutil librar /:", 0, 264) 
             address = GET_ADDRESS(File_address=File_address, File_name=File_name)
             return str(os.path.getsize(address)) + " bytes"
+    class Encryption_string():
+        def __init__(self, text, shift=5): # For dir you can use "dec" too
+            self.text = text.lower()
+            try: self.shift = int(shift)
+            except: print("Your shift number is not 'int'."), exit(0)
+        def Encode(self): 
+            Letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+            text_len = len(self.text)
+            result = ""
+            for i in range(text_len):
+                try:
+                    index = int(Letters.index(self.text[i]) + self.shift)
+                    if index > 26: 
+                        Distance = index - 26
+                        result += Letters[Distance] 
+                    elif index < 26: result += Letters[index] 
+                except: result += self.text[i] 
+            return result
+        def Decode(self): 
+            Letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+            text_len = len(self.text)
+            result = ""
+            for i in range(text_len):
+                try:
+                    index = int(Letters.index(self.text[i]) - self.shift)
+                    if index < 0: 
+                        Distance = index + 26
+                        result += Letters[Distance]
+                    else: result += Letters[index]
+                except: result += self.text[i]
+            return result
