@@ -1,4 +1,4 @@
-# Version: 0.2.3
+# Version: 0.2.5
 
 <h1>Intro </h1>
 <p>
@@ -61,6 +61,7 @@ Its_Hub Library version is 0.0.9
     <li><a href="#QR">QR</a></li>
     <li><a href="#Web">Web</a></li>
     <li><a href="#OS">OS</a></li>
+    <li><a href="#Encryption_string">Encryption_string </a></li>
     <li><a href="#Links">Links </a></li>
     <li><a href="#Donate">Donate </a></li>
 </ul>
@@ -255,6 +256,26 @@ print(result)
 os = hub.OS()
 size = os.Get_app_size(File_address="", File_name="text.txt")
 print(size)
+```
+
+# Encryption_string
+
+### Encode
+```Python
+Encryption = hub.Encryption_string(text="Hello, How are you today?", shift=5)
+result = Encryption.Encode()
+print(result)
+# Output:
+# mjqqt, mtb fwj dtz ytifd?
+```
+
+### Decode
+```Python
+Encryption = hub.Encryption_string(text="mjqqt, mtb fwj dtz ytifd?", shift=5)
+result = Encryption.Decode()
+print(result)
+# Output:
+# hello, how are you today?
 ```
 
 # Links
