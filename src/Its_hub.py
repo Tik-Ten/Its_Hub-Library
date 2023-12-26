@@ -31,6 +31,7 @@ TKHTMLVIEW
 ...
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 My name is Farbod Parkhooi(Or you can call me Tik Ten)
+This library Wikipedia page: https://simple.wikipedia.org/w/index.php?title=User%3AFarbod_Parkhooi%2FIts_Hub_Library
 This is Its_Hub doucuments: https://www.github.com/tik-ten/Its_Hub
 This is my Github link: https://www.github.com/tik-ten
 Thanks for use.
@@ -50,7 +51,7 @@ ________________________________________________________________________________
 """)
     quit(exit_code)
 def __version__():
-    print("Its_Hub Library version is 0.2.3")
+    print("Its_Hub Library version is 0.2.5")
 def GET_ADDRESS(File_address="", File_name="text.txt"):
     if File_address != "": address = File_address + File_name
     else: address = File_name
