@@ -312,7 +312,3 @@ ____________________________________________
             try: from tkinter import messagebox as message
             except ImportError: Return_error("Import error. I must import the tkinter library.", 0, 313)
             message.showerror(title=self.title, message=self.text)
-
-hub = Its_Hub()
-digital_msg = hub.Digital_message(title="This is title", text="This is text for message")
-digital_msg.Show_error()
