@@ -1,4 +1,4 @@
-# Version: 0.2.5
+# Version: 0.2.6
 
 <h1>Intro </h1>
 <p>
@@ -62,6 +62,7 @@ Its_Hub Library version is 0.0.9
     <li><a href="#Web">Web</a></li>
     <li><a href="#OS">OS</a></li>
     <li><a href="#Encryption_string">Encryption_string </a></li>
+    <li><a href="#Digital_message">Digital_message </a></li>
     <li><a href="#Links">Links </a></li>
     <li><a href="#Donate">Donate </a></li>
 </ul>
@@ -275,7 +276,30 @@ Encryption = hub.Encryption_string(text="mjqqt, mtb fwj dtz ytifd?", shift=5)
 result = Encryption.Decode()
 print(result)
 # Output:
-# hello, how are you today?
+# Hello, how are you today?
+```
+
+# Digital_message
+
+### Show_info
+```Python
+hub = Its_Hub()
+digital_msg = hub.Digital_message(title="This is title", text="This is text for message")
+digital_msg.Show_info()
+```
+
+### Show_warning
+```Python
+hub = Its_Hub()
+digital_msg = hub.Digital_message(title="This is title", text="This is text for message")
+digital_msg.Show_warning()
+```
+
+### Show_error
+```Python
+hub = Its_Hub()
+digital_msg = hub.Digital_message(title="This is title", text="This is text for message")
+digital_msg.Show_error()
 ```
 
 # Links
@@ -285,4 +309,4 @@ print(result)
 </ul>  
 
 # Donate
-<p> To donate me you can fork this repo or star it! :)</p>
+<p> To donate to me you can fork this repo or star it! :)</p>
