@@ -287,6 +287,8 @@ hub = Its_Hub()
 digital_msg = hub.Digital_message(title="This is title", text="This is text for message")
 digital_msg.Show_info()
 ```
+<br>output:<br>
+<img src="Files\out6.png" />
 
 ### Show_warning
 ```Python
@@ -294,6 +296,8 @@ hub = Its_Hub()
 digital_msg = hub.Digital_message(title="This is title", text="This is text for message")
 digital_msg.Show_warning()
 ```
+<br>output:<br>
+<img src="Files\out7.png" />
 
 ### Show_error
 ```Python
@@ -301,6 +305,8 @@ hub = Its_Hub()
 digital_msg = hub.Digital_message(title="This is title", text="This is text for message")
 digital_msg.Show_error()
 ```
+<br>output:<br>
+<img src="Files\out8.png" />
 
 # Links
 <ul>
