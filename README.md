@@ -28,7 +28,7 @@ For download this library:
 >>> cd Its_Hub
 >>> pip install -r requirements.txt
 >>> python setup.py <Your python libraries address>
->>> cd ...
+>>> cd ..
 >>> rmdir /s Its_Hub
 ```
 example for python libraries address: <b>"C:/Users/Farbod Parkhooi/AppData/Local/Programs/Python/Python311/Lib" </b>
