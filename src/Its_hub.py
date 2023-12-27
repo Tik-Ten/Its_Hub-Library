@@ -51,7 +51,7 @@ ________________________________________________________________________________
 """)
     quit(exit_code)
 def __version__():
-    print("Its_Hub Library version is 0.2.5")
+    print("Its_Hub Library version is 0.2.6")
 def GET_ADDRESS(File_address="", File_name="text.txt"):
     if File_address != "": address = File_address + File_name
     else: address = File_name
@@ -296,3 +296,19 @@ ____________________________________________
                     else: result += Letters[index]
                 except: result += self.text[i]
             return result
+    class Digital_message():
+        def __init__(self, title="This is title", text="This is a digital message"):
+            self.title = title
+            self.text = text
+        def Show_info(self):
+            try: from tkinter import messagebox as message
+            except ImportError: Return_error("Import error. I must import the tkinter library.", 0, 305)
+            message.showinfo(title=self.title, message=self.text)
+        def Show_warning(self):
+            try: from tkinter import messagebox as message
+            except ImportError: Return_error("Import error. I must import the tkinter library.", 0, 309)
+            message.showwarning(title=self.title, message=self.text)
+        def Show_error(self):
+            try: from tkinter import messagebox as message
+            except ImportError: Return_error("Import error. I must import the tkinter library.", 0, 313)
+            message.showerror(title=self.title, message=self.text)
