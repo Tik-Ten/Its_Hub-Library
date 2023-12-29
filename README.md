@@ -52,8 +52,8 @@ Its_Hub Library version is 0.0.9
 
 # Our products
 <ul>
-    <li><a href="#Encryption_string">Encryption_string </a></li>
     <li><a href="#Fake_profile">Fake_profile </a></li>
+    <li><a href="#Encryption_string">Encryption_string </a></li>
 </ul>
 
 # How to use ... class
