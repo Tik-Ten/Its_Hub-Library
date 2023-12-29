@@ -50,7 +50,13 @@ Its_Hub.__version__()
 Its_Hub Library version is 0.0.9
 ```
 
-# How to use ... library
+# Out products
+<ul>
+    <li><a href="#Encryption_string">Encryption_string </a></li>
+    <li><a href="#Fake_profile">Fake_profile </a></li>
+</ul>
+
+# How to use ... class
 <ul>
     <li><a href="#Faker">Faker</a></li>
     <li><a href="#Fake_profile">Fake_profile</a></li>
