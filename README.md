@@ -324,9 +324,17 @@ This class was created to hash the passwords for saving in the database.
 Hash = Hub.Hash(text="Hello world", salt="<-- This_is_salt -->", Hash_level="High") # hash level can be Medium and Low too
 Hashed = Hash.Encode()
 print(Hashed)
+
+# Also you can dont change the salt and Hash_level.
+# default salt: 13e355e545r45r8ew83q90123e
+# default Hash_level: High
 ```
 output: <br />
 <img src="Files\out9.png" />
+
+<br />
+output with default salt:
+<img src="Files\out10.png" />
 
 # Links
 <ul>
