@@ -54,6 +54,7 @@ Its_Hub Library version is 0.0.9
 <ul>
     <li><a href="#Fake_profile">Fake_profile </a></li>
     <li><a href="#Encryption_string">Encryption_string </a></li>
+    <li><a href="#Hash">Hash </a></li>
 </ul>
 
 # How to use ... class
@@ -69,6 +70,7 @@ Its_Hub Library version is 0.0.9
     <li><a href="#OS">OS</a></li>
     <li><a href="#Encryption_string">Encryption_string </a></li>
     <li><a href="#Digital_message">Digital_message </a></li>
+    <li><a href="#Hash">Hash </a></li>
     <li><a href="#Links">Links </a></li>
     <li><a href="#Donate">Donate </a></li>
 </ul>
@@ -313,6 +315,18 @@ digital_msg.Show_error()
 ```
 output:<br>
 <img src="Files\out8.png" />
+
+# Hash
+This class was created to hash the passwords for saving in the database.
+
+### Encode
+```Python
+Hash = Hub.Hash(text="Hello world", salt="<-- This_is_salt -->", Hash_level="High") # hash level can be Medium and Low too
+Hashed = Hash.Encode()
+print(Hashed)
+```
+output: <br />
+<img src="Files\out9.png" />
 
 # Links
 <ul>
