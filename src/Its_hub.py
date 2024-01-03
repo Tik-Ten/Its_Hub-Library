@@ -51,7 +51,7 @@ ________________________________________________________________________________
 """)
     quit(exit_code)
 def __version__():
-    print("Its_Hub Library version is 0.2.6")
+    print("Its_Hub Library version is 0.2.7")
 def GET_ADDRESS(File_address="", File_name="text.txt"):
     if File_address != "": address = File_address + File_name
     else: address = File_name
@@ -313,3 +313,24 @@ ____________________________________________
             try: from tkinter import messagebox as message
             except ImportError: Return_error("Import error. I must import the tkinter library.", 0, 314)
             message.showerror(title=self.title, message=self.text)
+    class Hash():
+        def __init__(self, text, salt="13e355e545r45r8ew83q90123e", Hash_level="High"): # hash level can be Medium and Low
+            self.Text = text.encode()
+            self.Hash_level = Hash_level
+            self.salt = salt
+        def Encode(self):
+            try: from hashlib import md5, sha1, sha224, sha256, sha384, sha512
+            except ImportError: Return_error("Import error. I must import hashlib library.", 0, 322)
+            text = str(md5(self.Text).hexdigest()).encode()
+            if self.Hash_level == "High":
+                text = str(self.salt + sha1(text).hexdigest() + self.salt).encode()
+                text = str(self.salt + sha224(text).hexdigest() + self.salt).encode()
+                text = str(self.salt + sha256(text).hexdigest() + self.salt).encode()
+                text = str(self.salt + sha384(text).hexdigest() + self.salt).encode()
+                text = str(self.salt + sha512(text).hexdigest() + self.salt).encode()
+                return str(text)
+            elif self.Hash_level == "Medium":
+                text = str(sha1(text).hexdigest() + self.salt).encode()
+                text = str(sha224(text).hexdigest() + self.salt).encode()
+                return str(text)
+            else: return str(text)
