@@ -334,3 +334,7 @@ ____________________________________________
                 text = str(sha224(text).hexdigest() + self.salt).encode()
                 return str(text)
             else: return str(text)
+
+Hub = Its_Hub()
+Hash = Hub.Hash("Hello world")
+print(Hash.Encode())
