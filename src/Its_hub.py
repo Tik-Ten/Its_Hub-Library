@@ -51,7 +51,7 @@ ________________________________________________________________________________
 """)
     quit(exit_code)
 def __version__():
-    print("Its_Hub Library version is 0.2.7")
+    print("Its_Hub Library version is 0.2.8")
 def GET_ADDRESS(File_address="", File_name="text.txt"):
     if File_address != "": address = File_address + File_name
     else: address = File_name
@@ -334,3 +334,16 @@ ____________________________________________
                 text = str(sha224(text).hexdigest() + self.salt).encode()
                 return str(text)
             else: return str(text)
+    class Hash_file():
+        def __init__(self, file_address="", file_name="file.exe"):
+            self.file_address = file_address
+            self.file_name = file_name
+        def Create(self):
+            try: from hashlib import md5
+            except ImportError: Return_error("Import error. I must import hashlib library.", 0, 322)
+            address = GET_ADDRESS(self.file_address, self.file_name)
+            with open(address, "r") as reader:
+                read = reader.readlines()
+                read = "".join(read).encode()
+                result = md5(read).hexdigest()
+                return result
