@@ -55,6 +55,7 @@ Its_Hub Library version is 0.0.9
     <li><a href="#Fake_profile">Fake_profile </a></li>
     <li><a href="#Encryption_string">Encryption_string </a></li>
     <li><a href="#Hash">Hash </a></li>
+    <li><a href="#Hash_file">Hash_file </a></li>
 </ul>
 
 # How to use ... class
@@ -71,6 +72,7 @@ Its_Hub Library version is 0.0.9
     <li><a href="#Encryption_string">Encryption_string </a></li>
     <li><a href="#Digital_message">Digital_message </a></li>
     <li><a href="#Hash">Hash </a></li>
+    <li><a href="#Hash_file">Hash_file </a></li>
     <li><a href="#Links">Links </a></li>
     <li><a href="#Donate">Donate </a></li>
 </ul>
@@ -335,6 +337,15 @@ output: <br />
 <br />
 output with default salt:
 <img src="Files\out10.png" />
+
+# Hash_file
+
+### Create
+```python
+Hash_file = hub.Hash_file(file_address="C:\\Users\\Farbod Parkhooi\\", file_name="text.txt")
+Hashed = Hash_file.Create()
+print(Hashed)
+```
 
 # Links
 <ul>
